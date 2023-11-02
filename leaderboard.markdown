@@ -3,7 +3,6 @@ layout: default
 title: Leaderboard
 ---
 
-# center table
 <style>
     table {
         margin-left: auto;
