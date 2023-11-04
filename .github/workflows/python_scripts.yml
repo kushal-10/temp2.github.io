@@ -29,4 +29,5 @@ jobs:
         git config --global user.email "kushalkoshti11@gmail.com"
         git add additional_scripts/output_markdowns/main_leaderboard.md
         git diff --quiet && git diff --staged --quiet || git commit -m "Update main_leaderboard.md"
-        git push origin HEAD:main
+        git push https://<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>@github.com/kushal-10/temp2.github.io.git main
+
