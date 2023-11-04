@@ -22,3 +22,12 @@ jobs:
 
     - name: Run Python script
       run: python additional_scripts/csv_to_markdowns/main_leaderboard.py 
+
+    - name: Update main_leaderboard.md
+      run: |
+        git config --global user.name "kushal-10"
+        git config --global user.email "kushalkoshti11@gmail.com"
+        git checkout main
+        git add additional_scripts/output_markdowns/main_leaderboard.md
+        git commit -m "Update main_leaderboard.md"
+        git push
