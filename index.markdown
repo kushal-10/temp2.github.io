@@ -11,24 +11,36 @@ title:  "Welcome to Jekyll!"
 date:   2023-11-02 18:00:23 +0100
 categories: jekyll update -->
 
+# clembench: A Framework for the Systematic Evaluation of Chat-Optimized Language Models as Conversational Agents
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+> Chalamalasetti, K., Götze, J., Hakimov, S., Madureira, B., Sadler, P., & Schlangen, D. (2023). clembench: Using Game Play to Evaluate Chat-Optimized Language Models as Conversational Agents (arXiv:2305.13455). arXiv. [PDF](https://doi.org/10.48550/arXiv.2305.13455)
 
-Jekyll requires blog post files to be named according to the following format:
+Recent work has proposed a methodology for
+the systematic evaluation of “Situated Language Understanding Agents”—agents that
+operate in rich linguistic and non-linguistic
+contexts—through testing them in carefully
+constructed interactive settings. Other recent
+work has argued that Large Language Models
+(LLMs), if suitably set up, can be understood
+as (simulators of) such agents. A connection
+suggests itself, which this paper explores: Can
+LLMs be evaluated meaningfully by exposing
+them to constrained game-like settings that are
+built to challenge specific capabilities?
 
-`YEAR-MONTH-DAY-title.MARKUP`
-
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+ As a
+proof of concept, this paper investigates five
+interaction settings, showing that current cLLMs (chat-optimized Large Language Models, "clems") are, 
+to an extent, capable of
+following game-play instructions. Both this
+capability and the quality of the game play,
+measured by how well the objectives of the
+different games are met, follows the development cycle, with newer models generally performing better. 
+The metrics even for the comparatively simple example games are far from
+being saturated, suggesting that the proposed
+instrument will remain to have diagnostic value.
 
 
-[jekyll-gh]:   https://github.com/clp-research/clembench
+# Interaction Settings
+
+{% include_relative additional_scripts/output_markdowns/interaction_settings.md %}
