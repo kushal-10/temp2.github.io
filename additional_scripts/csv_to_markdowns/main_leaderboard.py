@@ -48,16 +48,20 @@ df = df.loc[:, 'model':]
 for i in range(1, len(df), 2):
     df.loc[i, 'model'] = " "
 
-# Mark cells as bold
+#Mark cells as bold
 def add_bold(value):
-    return f'**{value}**'
+    if '(' in value and ')' in value:
+        parts = value.split('(')
+        return f'**{parts[0]}**(' + ''.join(parts[1:])
+    else:
+        return f'**{value}**'
 
 for index, row in df_indices.iterrows():
     df.loc[row['Row_Index'], row['Column_Name']] = add_bold(df.loc[row['Row_Index'], row['Column_Name']])
 
 # Convert dataframe to markdown
 md = df.to_markdown(index=False)
-# print(md)
+print(md)
 
 file_name = "additional_scripts/output_markdowns/main_leaderboard.md"
 with open(file_name, "w") as file:
