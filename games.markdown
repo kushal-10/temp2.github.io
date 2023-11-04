@@ -10,6 +10,6 @@ title: Games
     }
 </style>
 
-# Leaderboard
+# Game Descriptions
 
 {% include_relative additional_scripts/output_markdowns/games.md %}
