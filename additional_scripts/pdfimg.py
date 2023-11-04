@@ -3,7 +3,7 @@
 from pdf2image import convert_from_path
  
 #ALL, PV/SH,  REF, IMAGE, TABOO, WORDLE, 
-paths = ["results_eval/results_eval/results_eval/episode-level/plots/overview_in01.pdf",
+paths = ["results_eval/results_eval/results_eval/episode-level/plots/lines.pdf",
          "results_eval/results_eval/privateshared/results_eval/episode-level/plots/privateshared_overview-lines.pdf",
          "results_eval/results_eval/referencegame/results_eval/episode-level/plots/referencegame_overview-lines.pdf",
          "results_eval/results_eval/imagegame/results_eval/episode-level/plots/imagegame_overview-lines.pdf",
