@@ -12,4 +12,4 @@ title: Games
 
 # Leaderboard
 
-{% include_relative additional_scripts/output_markdowns/main_leaderboard.md %}
+{% include_relative additional_scripts/output_markdowns/games.md %}
