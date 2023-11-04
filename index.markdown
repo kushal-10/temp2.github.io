@@ -13,7 +13,7 @@ categories: jekyll update -->
 
 # clembench: A Framework for the Systematic Evaluation of Chat-Optimized Language Models as Conversational Agents
 
-> Chalamalasetti, K., Götze, J., Hakimov, S., Madureira, B., Sadler, P., & Schlangen, D. (2023). clembench: Using Game Play to Evaluate Chat-Optimized Language Models as Conversational Agents (arXiv:2305.13455). arXiv. [PDF](https://doi.org/10.48550/arXiv.2305.13455)
+> Chalamalasetti, K., Götze, J., Hakimov, S., Madureira, B., Sadler, P., & Schlangen, D. (2023). clembench: Using Game Play to Evaluate Chat-Optimized Language Models as Conversational Agents. [PDF](https://doi.org/10.48550/arXiv.2305.13455)
 
 Recent work has proposed a methodology for
 the systematic evaluation of “Situated Language Understanding Agents”—agents that
@@ -48,3 +48,7 @@ instrument will remain to have diagnostic value.
 # Models
 
 {% include_relative additional_scripts/output_markdowns/models.md %}
+
+The evaluated models with the details about
+number of parameters in billions, trained data size
+(tokens) in billions, and whether they were instruction tuned. Y: yes, n/a: publicly not available.
