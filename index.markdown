@@ -44,3 +44,7 @@ instrument will remain to have diagnostic value.
 # Interaction Settings
 
 {% include_relative additional_scripts/output_markdowns/interaction_settings.md %}
+
+# Models
+
+{% include_relative additional_scripts/output_markdowns/models.md %}
