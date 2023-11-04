@@ -1,0 +1,24 @@
+name: Run Python script on push
+
+on:
+  push:
+    branches: [ main ]  # Adjust the branch name as needed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8  
+
+    - name: Install dependencies
+      run: pip install pandas numpy tabulate re
+
+    - name: Run Python script
+      run: python additional_scripts/csv_to_markdowns/main_leaderboard.py 
