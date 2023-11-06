@@ -42,7 +42,7 @@ instrument will remain to have diagnostic value.
 
 # CLEMS
 
-{% include_relative additional_scripts/output_markdowns/models.md %}
+{% include_relative _posts/output_markdowns/models.md %}
 
 The evaluated models with the details about
 number of parameters in billions, trained data size
@@ -50,7 +50,7 @@ number of parameters in billions, trained data size
 
 # Interaction Settings
 
-{% include_relative additional_scripts/output_markdowns/interaction_settings.md %}
+{% include_relative _posts/output_markdowns/interaction_settings.md %}
 
 # Leaderboard by Individual Interaction Setting
 
