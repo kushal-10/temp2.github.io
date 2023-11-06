@@ -116,14 +116,14 @@ mds = [common_scores(pvsh_scores_path, pvsh_keep_cols, pvsh_mark_cols),
        common_scores(wordle_crit_scores_path, wordle_keep_cols, wordle_mark_cols),
        common_scores(taboo_scores_path, taboo_keep_cols, taboo_mark_cols)]
 
-paths = ["additional_scripts/output_markdowns/pvsh.md",
-         "additional_scripts/output_markdowns/image.md",
-        "additional_scripts/output_markdowns/ref.md",
-        "additional_scripts/output_markdowns/wordle.md",
-        "additional_scripts/output_markdowns/wordle_clue.md",
-        "additional_scripts/output_markdowns/wordle_crit.md",
-        "additional_scripts/output_markdowns/taboo.md"]
+paths = ["_posts/output_markdowns/pvsh.md",
+         "_posts/output_markdowns/image.md",
+        "_posts/output_markdowns/ref.md",
+        "_posts/output_markdowns/wordle.md",
+        "_posts/output_markdowns/wordle_clue.md",
+        "_posts/output_markdowns/wordle_crit.md",
+        "_posts/output_markdowns/taboo.md"]
 
 for i in range(len(paths)):
-    with open(paths[i], "w") as file:
+    with open(paths[i], "w", encoding="utf-8") as file:
         file.write(mds[i])

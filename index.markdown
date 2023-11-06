@@ -40,15 +40,17 @@ The metrics even for the comparatively simple example games are far from
 being saturated, suggesting that the proposed
 instrument will remain to have diagnostic value.
 
-
-# Interaction Settings
-
-{% include_relative additional_scripts/output_markdowns/interaction_settings.md %}
-
-# Models
+# CLEMS
 
 {% include_relative additional_scripts/output_markdowns/models.md %}
 
 The evaluated models with the details about
 number of parameters in billions, trained data size
 (tokens) in billions, and whether they were instruction tuned. Y: yes, n/a: publicly not available.
+
+# Interaction Settings
+
+{% include_relative additional_scripts/output_markdowns/interaction_settings.md %}
+
+# Leaderboard by Individual Interaction Setting
+

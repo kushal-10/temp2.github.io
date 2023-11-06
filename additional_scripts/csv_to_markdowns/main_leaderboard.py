@@ -63,7 +63,7 @@ for index, row in df_indices.iterrows():
 md = df.to_markdown(index=False)
 print(md)
 
-file_name = "additional_scripts/output_markdowns/main_leaderboard.md"
+file_name = "_posts/output_markdowns/main_leaderboard.md"
 with open(file_name, "w") as file:
     file.write(md)
 

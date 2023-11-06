@@ -34,7 +34,7 @@ md = df.to_markdown(index=False)
 # md = tabulate(md, headers='keys', tablefmt='pipe', stralign='center', numalign='center')
 print(md)
 
-file_name = "additional_scripts/output_markdowns/interaction_settings.md"
+file_name = "_posts/output_markdowns/interaction_settings.md"
 with open(file_name, "w") as file:
     file.write(md)
 
