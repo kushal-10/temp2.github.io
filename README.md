@@ -62,7 +62,8 @@ Models Information
 python3 models.py
 ```
 
-2) Get plots 
+2) Get plots :
+
 Set `games` and `metrics` depending upon which plots to use
 ```
 python3 pdfimg.py
