@@ -6,24 +6,24 @@ import re
 # Image Game with columns to keep and mark bold in markdown
 image_scores_path = "results_eval/results_eval/imagegame/results_eval/episode-level/tables/imagegameimagegame-overview-table.csv"
 image_keep_cols = ["Models", "Experiment", "Played", "Aborted", "Success", "Lose", "F1"]
-image_mark_cols = ["Success", "F1"]
+image_mark_cols = ["Success", "F1", "Played"]
 
 #Reference Game
 ref_scores_path = "results_eval/results_eval/referencegame/results_eval/episode-level/tables/referencegamereferencegame-overview-table.csv"
-ref_keep_cols = ["Models", "Experiment", "Played", "Aborted", "Success", "Lose"]
-ref_mark_cols = ["Success", "Played"]
+ref_keep_cols = ["Models", "Experiment", "Played", "Aborted", "Success", "Lose", "Main Score"]
+ref_mark_cols = ["Success", "Played", "Main Score"]
 
 #Taboo
 taboo_scores_path = "results_eval/results_eval/taboo/results_eval/episode-level/tables/tabootaboo-overview-table.csv"
-taboo_keep_cols = ["Models", "Experiment", "Played", "Aborted", "Success", "Lose", "Speed"]
-taboo_mark_cols = ["Success", "Played"]
+taboo_keep_cols = ["Models", "Experiment", "Played", "Aborted", "Success", "Lose", "Main Score"]
+taboo_mark_cols = ["Success", "Played", "Main Score"]
 
 # Wordle all three variants
 wordle_scores_path = "results_eval/results_eval/wordle/results_eval/episode-level/tables/wordlewordle-overview-table.csv"
 wordle_clue_scores_path = "results_eval/results_eval/wordle_withclue/results_eval/episode-level/tables/wordle_withcluewordle_withclue-overview-table.csv"
 wordle_crit_scores_path = "results_eval/results_eval/wordle_withcritic/results_eval/episode-level/tables/wordle_withcriticwordle_withcritic-overview-table.csv"
-wordle_keep_cols = ["Models", "Experiment", "Played", "Aborted", "Success", "Lose", "Speed"]
-wordle_mark_cols = ["Success", "Played"]
+wordle_keep_cols = ["Models", "Experiment", "Played", "Aborted", "Success", "Lose", "Main Score"]
+wordle_mark_cols = ["Success", "Played", "Main Score"]
 
 #Private/Shared 
 pvsh_scores_path = "results_eval/results_eval/privateshared/results_eval/episode-level/tables/privatesharedprivateshared-overview-table.csv"

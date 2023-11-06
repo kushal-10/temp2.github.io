@@ -22,4 +22,5 @@ For each model (pairing),
 
 
 # Plots
-![Overview Lines Plot](_posts/plots/lines.jpg)
+![Plot](/plots/lines.jpg)
+

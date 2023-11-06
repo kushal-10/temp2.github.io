@@ -1,29 +1,44 @@
 # CONVERT PDF TO JPG
 
 from pdf2image import convert_from_path
+import os
  
-#ALL, PV/SH,  REF, IMAGE, TABOO, WORDLE, 
-paths = ["results_eval/results_eval/results_eval/episode-level/plots/lines.pdf",
-         "results_eval/results_eval/privateshared/results_eval/episode-level/plots/privateshared_overview-lines.pdf",
-         "results_eval/results_eval/referencegame/results_eval/episode-level/plots/referencegame_overview-lines.pdf",
-         "results_eval/results_eval/imagegame/results_eval/episode-level/plots/imagegame_overview-lines.pdf",
-         "results_eval/results_eval/taboo/results_eval/episode-level/plots/taboo_overview-lines.pdf",
-         "results_eval/results_eval/wordle/results_eval/episode-level/plots/wordle_overview-lines.pdf",
-         "results_eval/results_eval/wordle_withclue/results_eval/episode-level/plots/wordle_withclue_overview-lines.pdf",
-         "results_eval/results_eval/wordle_withcritic/results_eval/episode-level/plots/wordle_withcritic_overview-lines.pdf"
-         ]
 
-img_paths = ["_posts/plots/lines.jpg",
-         "_posts/plots/privateshared_overview-lines.jpg",
-         "_posts/plots/referencegame_overview-lines.jpg",
-         "_posts/plots/imagegame_overview-lines.jpg",
-         "_posts/plots/taboo_overview-lines.jpg",
-         "_posts/plots/wordle_overview-lines.jpg",
-         "_posts/plots/wordle_withclue_overview-lines.jpg",
-         "_posts/plots/wordle_withcritic_overview-lines.jpg"
-         ]
+# Initialize paths with overall plot
+main_path = ["results_eval/results_eval/results_eval/episode-level/plots/lines.pdf"]
 
-# Store Pdf with convert_from_path function
-for i in range(len(paths)):
-    images = convert_from_path(paths[i])
-    images[0].save(img_paths[i], 'JPEG')
+#game = "imagegame", "prvateshared", "referencegame", "taboo", "wordle", "wordle_withclue", "wordle_withcritic" 
+#metrics = "Kappa", "Aborted", "Lose", "Main Score", "Success", "Played"
+
+plot_definitions = {
+    "imagegame": ["Played", "Aborted", "Success", "Lose", "F1"],
+    "privateshared": ["Played", "Main Score", "Success", "Kappa", "Middle-Accuracy", "Slot-Filling-Accuracy"],
+    "referencegame": ["Played", "Aborted", "Success", "Lose", "Main Score"],
+    "taboo": ["Played", "Aborted", "Success", "Lose", "Main Score"],
+    "wordle": ["Played", "Aborted", "Success", "Lose", "Main Score"],
+    "wordle_withclue": ["Played", "Aborted", "Success", "Lose", "Main Score"],
+    "wordle_withcritic": ["Played", "Aborted", "Success", "Lose", "Main Score"]
+}
+
+#Lines
+def get_pdf_paths_lines(game, metric):
+    path = os.path.join("results_eval", "results_eval", str(game), "results_eval", "episode-level", "plots", str(game) + "_overview-lines_" + str(metric) +".pdf")
+    return path
+
+#Without Lines
+def get_pdf_paths(game, metric):
+    path = os.path.join("results_eval", "results_eval", str(game), "results_eval", "episode-level", "plots", str(game) + "_overview_" + str(metric) +".pdf")
+    return path
+
+#Get plot for main leaderboard
+images = convert_from_path(main_path[0])
+images[0].save(os.path.join("plots/lines.jpg"), 'JPEG')
+
+# Get individual Plots
+game_keys = list(plot_definitions.keys())
+for game in game_keys:
+    metric_list = plot_definitions[game]
+    for metric in metric_list:
+        path = get_pdf_paths_lines(game, metric)
+        images = convert_from_path(path)
+        images[0].save(os.path.join("2023", "06", "01", "plots", str(game) + "_" + str(metric) + ".jpg"), 'JPEG')
